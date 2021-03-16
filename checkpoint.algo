@@ -1,0 +1,22 @@
+ALGORITHM Checkpoint
+VAR
+    spaces: INTEGER:=1;
+    vowels: INTEGER:=0;
+    characters: INTEGER:=1;
+    sentence: STRING:='never gonna give you up.'
+BEGIN
+    Write("Enter a sentence");
+    Read(sentence);
+    WHILE (sentence[characters] <> ".") DO
+        IF (sentence[characters] = ' ') THEN
+            spaces:= spaces + 1;
+        ELSE_IF (sentence[characters] = 'a' or 'e' or 'i' or 'o' or 'u') THEN
+            vowels:= vowels + 1;
+        END_IF
+        characters:= characters + 1;
+    END_WHILE
+    Write(spaces);
+    Write(vowels);
+    Write(characters);
+
+END
